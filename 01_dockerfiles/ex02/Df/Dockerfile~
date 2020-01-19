@@ -1,0 +1,10 @@
+from ruby
+
+RUN apt update -y && \
+apt upgrade -y
+
+ONBUILD COPY ./helloWorld  /opt/app
+ONBUILD gem install
+
+ONBUILD RUN rake db:migrate
+ONBUILD RUN rake db:seed
