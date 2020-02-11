@@ -1,1 +1,0 @@
-eval docker-machine ssh Aiur "$(docker swarm join-token worker | tail -n 3)"
